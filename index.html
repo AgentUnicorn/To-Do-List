@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>To Do List</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="tab-icon.png" type="image/x-icon">
 </head>
 <body>
     <div class="background">
@@ -24,9 +25,9 @@
         </div>
     </div>
         <div class="button-area">
-            <button class="btn btn-success" onclick="render()">All ||<span  id="value-all"></span></button>
-            <button class="btn btn-success" onclick="render('done')">Done ||<span  id="value-done"></span></button>
-            <button class="btn btn-success" onclick="render('undone')">Undone ||<span  id="value-undone"></span></button>
+            <button class="btn btn-primary" onclick="render()">All ||<span  id="value-all"></span></button>
+            <button class="btn btn-primary" onclick="render('done')">Done ||<span  id="value-done"></span></button>
+            <button class="btn btn-primary" onclick="render('undone')">Undone ||<span  id="value-undone"></span></button>
             <div id="resultArea" class="result"><ul></ul></div>
         </div>
         </div>
