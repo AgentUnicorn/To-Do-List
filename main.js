@@ -72,9 +72,9 @@ let render = (status) => {
     }
 
     let htmlTodoArray = showList.map((eachItem, index) => {
-        return `<li><span style = "text-decoration: ${eachItem.isDone? `line-through`: ` `}" onclick="toggleDone(${index})"> 
+        return `<li><span style = "text-decoration: ${eachItem.isDone? `line-through`: ` `}" > 
             ${eachItem.text} </span><button class="btn btn-danger" onclick="removeItem(${index})">X</button> 
-            <a> ${eachItem.isDone? `Mark as Undone`: `Mark as Done` }</a>
+            <button class="btn btn-primary" onclick="toggleDone(${index})"> ${eachItem.isDone? `Undone`: `Done` }</button>
             </li>`
     }).join('');
     saveTodo();
