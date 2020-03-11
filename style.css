@@ -1,3 +1,6 @@
+body {
+  font-family: 'Bellota', cursive;
+}
 .background {
   background-image: url(cat3.jpg);
   background-color: #cccccc;
@@ -21,9 +24,12 @@
 .button-area {
   padding-top: 5%;
 }
-.button-area > button {
+/* .button-area > button {
   margin-right: 5%;
-}
+} */
 .result {
   padding: 2% 0;
+}
+input {
+  outline-style: none;
 }

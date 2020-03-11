@@ -43,6 +43,8 @@ let toggleDone = (index) => {
 let saveTodo = () => {
     let str = JSON.stringify(todoList);
     localStorage.setItem("todo",str);
+
+    // localStorage.setItem("todo", JSON.stringify(todoList));
 }
 
 let getTodo = () => {
@@ -72,10 +74,17 @@ let render = (status) => {
     }
 
     let htmlTodoArray = showList.map((eachItem, index) => {
-        return `<li><span style = "text-decoration: ${eachItem.isDone? `line-through`: ` `}" > 
-            ${eachItem.text} </span><button class="btn btn-danger" onclick="removeItem(${index})">X</button> 
-            <button class="${eachItem.isDone? `btn btn-warning`: `btn btn-success` }" onclick="toggleDone(${index})"> ${eachItem.isDone? `Undone`: `Done` }</button>
-            </li>`
+        return `<li class="list-group-item">
+                <span style = "text-decoration: ${eachItem.isDone? `line-through`: ` `}" > 
+                    ${eachItem.text} 
+                </span>
+                <button class="${eachItem.isDone? `btn btn-warning`: `btn btn-success` }" onclick="toggleDone(${index})">
+                    ${eachItem.isDone? `Undone`: `Done` }
+                </button>
+                <button class="btn btn-danger" onclick="removeItem(${index})">
+                    X
+                </button> 
+                </li>`
     }).join('');
     saveTodo();
     document.getElementById("resultArea").innerHTML = htmlTodoArray;
