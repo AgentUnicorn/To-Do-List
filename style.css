@@ -6,14 +6,17 @@
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  color: white
+  color: black;
 }
 
 .text {
+  background-color: white;
   text-align: left;
   padding-top: 5%;
   padding-left: 3%;
-  padding-right: 40%;
+  padding-right: 3%;
+  margin-right: 40%;
+  margin-left: 3%;
 }
 .button-area {
   padding-top: 5%;

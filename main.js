@@ -2,6 +2,12 @@ let input = document.getElementById('toDoInput');
 let resultArea = document.getElementById('resultArea');
 // let prior = document.getElementById('prioritu');
 
+input.addEventListener("keydown", function(e) {
+    if (e.keyCode === 13) {
+      addItem();
+    }
+  });
+
 let todoList =[]
 
 let addItem = () => {
@@ -12,7 +18,8 @@ let addItem = () => {
     };
     todoList.push(todoValue);
     // console.log(prior);
-    saveTodo()
+    saveTodo();
+    document.getElementById('toDoInput').value = '';
     render();
 }
 
